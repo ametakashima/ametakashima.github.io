@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Photographs portfolio by ametakashima, an independent photographer based in Osaka, Japan.">
   <title>ametakashima — Photography</title>
+
   <style>
     body {
       margin: 0;
@@ -12,12 +14,14 @@
       color: #111;
       font-family: Helvetica, Arial, sans-serif;
     }
+
     header {
       padding: 35px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     h1 {
       font-size: 20px;
       letter-spacing: 0;
@@ -25,45 +29,156 @@
       margin: 0;
       font-weight: 700;
     }
+
     nav a {
       color: inherit;
       margin-left: 20px;
       text-decoration: none;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     main {
-      padding: 15vh 6%;
+      padding: 15vh 6% 12vh;
       min-height: 45vh;
     }
+
     h2 {
       font-size: clamp(40px, 9vw, 110px);
       font-weight: 400;
       letter-spacing: -3px;
+      line-height: 1.08;
+      margin-top: 0;
+      margin-bottom: 34px;
     }
+
+    .intro {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .works {
+      margin-top: clamp(95px, 15vh, 190px);
+    }
+
+    .section-heading {
+      font-size: 13px;
+      font-weight: 400;
+      margin: 0 0 25px;
+    }
+
+    figure {
+      margin: 0;
+      width: min(100%, 640px);
+    }
+
+    .photo-link {
+      display: block;
+      cursor: zoom-in;
+    }
+
+    .photo-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #555;
+    }
+
     footer {
       padding: 30px 6%;
       font-size: 12px;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 26px 6%;
+      }
+
+      main {
+        padding-top: 12vh;
+      }
+
+      h2 {
+        letter-spacing: -1.5px;
+      }
+
+      .works {
+        margin-top: 80px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>ametakashima</h1>
+
     <nav>
-      <a href="https://www.instagram.com/ametakashima/"
-         target="_blank"
-         rel="noopener noreferrer">CONTACT</a>
+      <a
+        href="https://www.instagram.com/ametakashima/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CONTACT
+      </a>
     </nav>
   </header>
 
   <main>
     <h2>Photographs portfolio.</h2>
-    <p>Independent photographer based in Osaka, Japan.</p>
-    <p>Selected works — Coming soon.</p>
+
+    <p class="intro">
+      Independent photographer based in Osaka, Japan.
+    </p>
+
+    <section class="works"
+      aria-labelledby="selected-works-heading">
+
+      <h3
+        id="selected-works-heading"
+        class="section-heading">
+        Selected works
+      </h3>
+
+      <figure>
+        <a
+          class="photo-link"
+          href="images/01.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open photograph 001 in full size"
+        >
+          <img
+            src="images/01.jpg"
+            alt="A green and white bus photographed in motion on a city street, with tilted framing and soft motion blur."
+            width="1232"
+            height="1840"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+
+        <figcaption>
+          <span>001 — Untitled</span>
+          <span>Photography</span>
+        </figcaption>
+      </figure>
+
+    </section>
   </main>
 
-  <footer>© 2026 ametakashima</footer>
+  <footer>
+    © 2026 ametakashima
+  </footer>
 </body>
 </html>
